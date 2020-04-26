@@ -1,0 +1,2 @@
+rootProject.name='DrawGame'
+include ':app'
