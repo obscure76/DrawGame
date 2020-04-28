@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">DrawGame</string>
+    <string name="history">History</string>
+    <string name="options_paint">Color Picker</string>
+    <string name="options_new">New</string>
+    <string name="brush_sml">Small</string>
+    <string name="brush_med">medium</string>
+    <string name="brush_large">large</string>
+    <string name="options_erase">erase</string>
+    <string name="action_new_drawing">new</string>
+    <string name="action_ok">ok</string>
+    <string name="action_cancel">cancel</string>
+    <string name="action_new_q">newq</string>
 </resources>

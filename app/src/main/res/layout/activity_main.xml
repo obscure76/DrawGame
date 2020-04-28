@@ -1,18 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#ff080808"
+    android:orientation="vertical"
+    tools:context=".activity.DrawActivity">
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/top_options"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/color_pick"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:contentDescription="@string/options_paint"
+            android:background="@android:color/transparent"
+            android:src="@drawable/colors_pick"
+            android:layout_marginRight="20dp" />
+
+        <ImageButton
+            android:id="@+id/erase_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:contentDescription="@string/options_erase"
+            android:background="@android:color/transparent"
+            android:src="@drawable/erase"
+            android:layout_marginRight="20dp" />
+
+        <ImageButton
+            android:id="@+id/new_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:contentDescription="@string/options_new"
+            android:background="@android:color/transparent"
+            android:src="@drawable/new_img"
+            android:layout_marginRight="20dp" />
+
+    </LinearLayout>
+
+    <com.example.drawgame.views.DrawView
+        android:id="@+id/drawing"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp"
+        android:layout_weight="1"
+        android:background="#FFFFFFFF" />
+
+    <LinearLayout
+        android:id="@+id/all_brushes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center"
+        android:orientation="horizontal">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageButton
+            android:id="@+id/small_brush"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_default_normal_holo_dark"
+            android:contentDescription="@string/brush_sml"
+            android:onClick="handleBrushSize"
+            android:src="@drawable/small" />
+
+
+        <ImageButton
+            android:id="@+id/medium_brush"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_default_normal_holo_dark"
+            android:contentDescription="@string/brush_med"
+            android:onClick="handleBrushSize"
+            android:src="@drawable/medium" />
+
+        <ImageButton
+            android:id="@+id/large_brush"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_default_normal_holo_dark"
+            android:contentDescription="@string/brush_large"
+            android:onClick="handleBrushSize"
+            android:src="@drawable/large"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
