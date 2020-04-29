@@ -47,7 +47,7 @@ public class DrawActivity extends BaseActivity implements View.OnClickListener {
         }
     }
 
-    private Iterable<? extends View> getMenuOptions() {
+    Iterable<? extends View> getMenuOptions() {
         return getLayoutChildren(R.id.top_options);
     }
 
@@ -77,7 +77,7 @@ public class DrawActivity extends BaseActivity implements View.OnClickListener {
         }
     }
 
-    private Iterable<? extends View> getBrushes() {
+    Iterable<? extends View> getBrushes() {
         return getLayoutChildren(R.id.all_brushes);
     }
 
